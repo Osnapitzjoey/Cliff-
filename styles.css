@@ -1,0 +1,94 @@
+body {
+  background-color: #1c1c1c; /* Dark background color */
+  color: #e0e0e0; /* Light text color */
+  font-family: 'Cinzel Decorative', cursive; /* New font */
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Creepster', cursive;
+  font-size: 2em;
+  opacity: 0.8; /* Lowered opacity for the title */
+}
+
+.mysterious-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.mysterious-nav li {
+  margin: 0 15px;
+}
+
+.mysterious-nav a {
+  color: #f4af1b; /* Yellow color changed to a more fitting theme color */
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+  /* Glitchy Hover Effect */
+  position: relative;
+  display: inline-block;
+  transform: skew(-5deg);
+  background: linear-gradient(90deg, transparent, #e0e0e0, transparent); /* Background color changed to light gray */
+  animation: glitch 0.5s infinite;
+}
+
+.mysterious-nav a:hover {
+  color: #e74c3c; /* Red color for hover effect */
+}
+
+@keyframes glitch {
+  0% {
+    transform: skew(-5deg);
+    background-position: 0 0;
+  }
+  25% {
+    transform: skew(5deg);
+    background-position: 10px 10px;
+  }
+  50% {
+    transform: skew(-5deg);
+    background-position: -10px -10px;
+  }
+  75% {
+    transform: skew(5deg);
+    background-position: 10px 10px;
+  }
+  100% {
+    transform: skew(-5deg);
+    background-position: 0 0;
+  }
+}
+
+.main-content {
+  text-align: center;
+}
+
+.ghost-image {
+  width: 300px;
+  margin: 20px auto;
+  filter: brightness(1.5) contrast(1.5) blur(10px) drop-shadow(0 0 10px #00FFFF);
+  transition: filter 0.3s ease; /* Ethereal glow effect */
+}
+
+.ghost-image:hover {
+  filter: none; /* Remove the ethereal glow effect on hover */
+}
+
+.ghostly-text {
+  margin: 20px 0;
+}
