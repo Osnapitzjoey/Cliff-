@@ -1,32 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home Page</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.dom.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.dom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
 	<script src="sketch.js"></script>
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<style>body {padding: 0; margin: 0;}</style>
+	<style>
+		body {
+			padding: 20px; /* Adjusted padding */
+			margin: 0;
+		}
+
+		header {
+			text-align: center; /* Centered header text */
+			margin-bottom: 20px; /* Added margin to the header */
+			font-family: 'Creepster', cursive;
+			font-size: 2em;
+			opacity: 0.8;
+		}
+
+		img {
+			width: 100%; /* Made the image responsive */
+			max-width: 300px; /* Set maximum width for the image */
+			display: block; /* Centered the image */
+			margin: 0 auto;
+		}
+
+		ol {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center; /* Centered the list items */
+		}
+
+		ol li {
+			margin: 0 15px;
+		}
+
+		ol a {
+			color: #f4af1b;
+			text-decoration: none;
+			font-size: 1.2em;
+			transition: color 0.3s ease;
+			position: relative;
+			display: inline-block;
+			transform: skew(-5deg);
+			background: linear-gradient(90deg, transparent, #e0e0e0, transparent);
+			animation: glitch 0.5s infinite;
+		}
+
+		ol a:hover {
+			color: #e74c3c;
+		}
+
+		@keyframes glitch {
+			0% {
+				transform: skew(-5deg);
+				background-position: 0 0;
+			}
+			25% {
+				transform: skew(5deg);
+				background-position: 10px 10px;
+			}
+			50% {
+				transform: skew(-5deg);
+				background-position: -10px -10px;
+			}
+			75% {
+				transform: skew(5deg);
+				background-position: 10px 10px;
+			}
+			100% {
+				transform: skew(-5deg);
+				background-position: 0 0;
+			}
+		}
+	</style>
 </head>
 <body>
-	<div class="container">
-		<header>
-			<h2>What Happened to Cliff?</h2>
-		</header>
-		<img src="images/character.png" alt="ghost" width="300px">
-		<nav class="mysterious-nav">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="audio.html">EVP Recording</a></li>
-				<li><a href="animation.html" class="meet-cliff">Who was Cliff?</a></li>
-				<li><a href="programming.html">Interactivity</a></li>
-				<li><a href="final.html">Final Project</a></li>
-			</ul>
-		</nav>
-		<h1>Programming</h1>
-	</div>
+	<header>
+		<h2>What Happened to Cliff?</h2>
+	</header>
+	<img src="images/character.png" alt="ghost">
+	<ol>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="audio.html">EVP Recording</a></li>
+		<li><a href="animation.html" class="meet-cliff">Who was Cliff?</a></li>
+		<li><a href="programming.html">Interactivity</a></li>
+		<li><a href="final.html">Final Project</a></li>
+	</ol>
 </body>
 </html>
